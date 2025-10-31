@@ -1,0 +1,95 @@
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #aac5ee;
+    color: #1c1e21;
+    margin: 1;
+}
+
+h1 {
+    background-color: #6099ee;
+    margin-top: 0;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 1rem;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h2, h3 {
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    color: #3b2828;
+}
+
+h4, h5 {
+    font-size: 1.5rem;
+    padding-top: 1 rem;
+    color:#4c1f1f;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar-nav {
+    text-align: center;
+    font-weight: 500;
+    border-radius: 6px;
+    margin: 0 15px;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.gif-grid,
+.character-grid,
+.episode-grid,
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.character-card,
+.episode-card,
+.location-card {
+    background-color: #ffffff;
+    border: 1px solid #dddfe2;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.search-form {
+    background-color: #c8ea9d;
+}
+
+.search-form input[type="text"] {
+    border-radius: 6px;
+    width: 25%;
+    box-sizing: border-box; 
+}
+
+.form-label {
+    margin-bottom: 0.5rem;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    font-weight: 600;
+}
+.btn-primary:hover {
+    background-color: #5ca35a;
+}

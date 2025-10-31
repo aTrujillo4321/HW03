@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <%- include("partials/head.ejs") %>
+</head>
+<body>
+    <h1> Welcome to the HomePage! </h1>
+    <%- include("partials/nav.ejs") %>
+    <br>
+    <h2> Some random characters </h2>
+    <div class = "gif-grid">
+        <%gifs.forEach(character => {
+        %>
+            <img src="<%= character.image %>" alt="<%= character.name %>">
+            <p> <%= character.name %></p>
+            <br>
+            <br>
+        <% }); %>
+        </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@giphy/js-fetch-api": "^5.7.0",
+    "axios": "^1.12.2",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "install": "^0.13.0",
+    "node-fetch": "^3.3.2",
+    "plumbus": "^1.0.0",
+    "rick-and-morty": "^1.0.1",
+    "rickmortyapi": "^2.3.0"
+  },
+  "name": "hw03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

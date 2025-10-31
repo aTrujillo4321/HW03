@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <%- include("partials/head.ejs") %>
+</head>
+<body>
+    <h1> Top Five Episodes </h1>
+    <%- include("partials/nav.ejs") %>
+    <br>
+    <h3> Here's my personal rankings </h3>
+    <br>
+    <div class = "episode-grid">
+        <% if (typeof episodes !== 'undefined' && episodes.length) {
+            episodes.forEach((episode, index) => {
+        %>
+        <div class = "episode-card">
+            <div class="rank-badge">#<%= index + 1 %></div>
+            <h4><%= episode.name %></h4>
+            <p><%= episode.episode %></p>
+            <p><strong>Air Date:</strong> <%= episode.air_date %></p>
+            <br>
+        </div>
+        <br>
+        <br>
+        <%
+        });
+    } else {
+        %>
+        <p> Error ... </p>
+    <% } %>
+    </div>
+</body>
+</html>

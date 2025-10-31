@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <%- include("partials/head.ejs") %>
+</head>
+<body>
+    <h1> All the locations </h1>
+    <%- include("partials/nav.ejs") %>
+    <br>
+    <h2> Explore a location </h2>
+    <form action="/locations" method="GET" class="search-form mb-4 p-3 border rounded bg-light">
+        <div class="Location_Name">
+            <label for="name" class="form-label"><strong>Location Name</strong></label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div class="Location_Type">
+            <label for="type" class="form-label"><strong>Location Type</strong></label>
+            <input type="text" id="type" name="type">
+        </div>
+        <button type="btn" class="btn btn-primary search-button w-100">Search Locations</button>
+    </form>
+    <br>
+    <br>
+    <div class="location-grid">
+        <% if (typeof locations !== 'undefined' && locations.length) {
+            locations.forEach(location => { 
+        %>
+        <div class="location-card">
+            <h4><%= location.name %></h4>
+            <p><strong>Type:</strong> <%= location.type %></p>
+            <p><strong>Dimension:</strong> <%= location.dimension ? location.dimension : 'Unknown' %></p>
+            <br>
+        </div>
+        <%
+        });
+    } else {
+        %>
+        <p> Wubba wubba dub dub! </p>
+        <% } %>
+    </div>
+</body>
+</html>

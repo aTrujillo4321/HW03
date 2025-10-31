@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <%- include("partials/head.ejs") %>
+</head>
+<body>
+    <h1> Top Five Characters! </h1>
+    <%- include("partials/nav.ejs") %>
+    <br>
+    <h3> Here's my personal list </h3>
+    <br>
+    <div class = "character-grid">
+        <% if (typeof characters !== 'undefined' && characters.length) {
+            characters.forEach((character, index) => {
+        %>
+        <div class = "character-card">
+            <div class="rank-badge">#<%= index + 1 %></div>
+            <img src="<%= character.image %>" alt="<%= character.name %>">
+            <h3><%= character.name %></h3>
+            <%= character.status %> - <%= character.species %>
+            <%= character.location.name %>
+        </div>
+        <br>
+        <br>
+        <%
+        });
+    } else {
+        %>
+        <p> Error... </p>
+    <% } %>
+    </div>
+</body>
+</html>
